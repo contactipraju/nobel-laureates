@@ -12,6 +12,9 @@ import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+/* Services */
+import { NobelsService } from './nobels/nobels.service';
+
 /* Components */
 import { NobelsComponent } from './nobels/nobels.component';
 
@@ -31,7 +34,7 @@ import { NobelsComponent } from './nobels/nobels.component';
       { path: 'nobels', component: NobelsComponent }
     ])
   ],
-  providers: [],
+  providers: [NobelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
