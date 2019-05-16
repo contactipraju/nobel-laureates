@@ -9,6 +9,10 @@
       </div>
     </div>
 
+    <div class="main-content">
+      <app-nobel-prize class="nobel-prize" *ngFor="let prize of laureate.prizes" [prize]="prize"></app-nobel-prize>
+    </div>
+
     <div class="card-details clearfix">
       <div class="born">
         <div class="title">Born:</div>
