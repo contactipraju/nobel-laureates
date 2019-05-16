@@ -9,46 +9,53 @@
       padding: 5px;
 
       .avatar {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
       }
 
-      .card-title {
+      .header-content {
         flex-grow: 1;
+        position: relative;
 
-        .card-title-firstname {
-          font-size: 16px;
+        .card-title {
+          flex-grow: 1;
+
+          .card-title-firstname {
+            font-size: 16px;
+          }
+
+          .card-title-surname {
+            font-size: 14px;
+            color: grey;
+          }
         }
 
-        .card-title-surname {
-          font-size: 14px;
-          color: grey;
+        .card-details {
+          position: absolute;
+          bottom: 0px;
+
+          color: #444;
+
+          & > div {
+            font-size: 10px;
+
+            .title {
+              font-size: 12px;
+            }
+
+            .date {
+            }
+            .city {
+            }
+            .country {
+            }
+          }
         }
       }
     }
 
-    .card-details {
-      display: flex;
-      flex-direction: row;
-      color: #444;
-
-      & > div {
-        flex-grow: 1;
-        font-size: 10px;
-
-        .title {
-          font-size: 12px;
-        }
-        .date {
-
-        }
-        .city {
-
-        }
-        .country {
-
-        }
-      }
+    .main-content {
+      min-height: 55px;
     }
   }
 }

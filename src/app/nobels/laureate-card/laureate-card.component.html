@@ -3,30 +3,32 @@
     <div class="card-header">
       <img class="avatar" alt="{{laureate.firstname}}" title="{{laureate.firstname}}" [src]="[ImageURL]">
 
-      <div class="card-title">
-        <span class="card-title-firstname">{{laureate.firstname}}, </span>
-        <span class="card-title-surname">{{laureate.surname}}</span>
+      <div class="header-content">
+        <div class="card-title">
+          <span class="card-title-firstname">{{laureate.firstname}}, </span>
+          <span class="card-title-surname">{{laureate.surname}}</span>
+        </div>
+
+        <div class="card-details">
+          <div class="born">
+            <span class="title">Born: </span>
+            <span class="date">{{laureate.born}}</span>
+            <span class="city">, {{laureate.bornCity}}</span>
+            <span class="country">, {{laureate.bornCountry}}</span>
+          </div>
+
+          <div class="died">
+            <span class="title">Died: </span>
+            <span class="date">{{laureate.died}}</span>
+            <span class="city">, {{laureate.diedCity}}</span>
+            <span class="country">, {{laureate.diedCountry}}</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="main-content">
       <app-nobel-prize class="nobel-prize" *ngFor="let prize of laureate.prizes" [prize]="prize"></app-nobel-prize>
-    </div>
-
-    <div class="card-details clearfix">
-      <div class="born">
-        <div class="title">Born:</div>
-        <div class="date">{{laureate.born}}</div>
-        <div class="city">{{laureate.bornCity}}</div>
-        <div class="country">{{laureate.bornCountry}}</div>
-      </div>
-
-      <div class="died">
-        <div class="title">Died:</div>
-        <div class="date">{{laureate.died}}</div>
-        <div class="city">{{laureate.diedCity}}</div>
-        <div class="country">{{laureate.diedCountry}}</div>
-      </div>
     </div>
   </div>
 </div>
