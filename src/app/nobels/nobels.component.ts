@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NobelsService }     from './nobels.service';
-import { Laureates }         from './nobels.model';
+import { Laureate }          from './nobels.model';
 
 @Component({
   selector: 'app-nobels',
@@ -12,7 +12,7 @@ export class NobelsComponent implements OnInit {
   constructor(public nobelsService: NobelsService) {
   }
 
-  laureates: Laureates[];
+  laureates: Laureate[];
   laureatesLoaded: boolean = false;
 
   ngOnInit() {

@@ -12,7 +12,7 @@ export interface Prize {
   Affiliations: Location[];
 }
 
-export interface Laureates {
+export interface Laureate {
   Id: string;
   Firstname: string;
   Surname: string;
@@ -29,5 +29,5 @@ export interface Laureates {
 }
 
 export interface Root {
-  laureates: Laureates[];
+  laureates: Laureate[];
 }

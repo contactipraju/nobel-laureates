@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of }          from 'rxjs';
 import { catchError, map, tap }    from 'rxjs/operators';
 
-import { Root, Laureates }         from './nobels.model';
+import { Root, Laureate }          from './nobels.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,7 +19,7 @@ export class NobelsService {
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl) {
   }
 
-  public getLocalLaureates(): Observable<Laureates[]> {
+  public getLocalLaureates(): Observable<Laureate[]> {
     return this.http.get<Root>(this.baseUrl + 'assets/data/nobel-laureates.json')
       .pipe(
         map (x => x.laureates),
