@@ -1,31 +1,31 @@
 export interface Location {
-  Name: string;
-  City: string;
-  Country: string;
+  name: string;
+  city: string;
+  country: string;
 }
 
 export interface Prize {
-  Year: number,
-  Category: string;
-  Share: number;
-  Motivation: string;
-  Affiliations: Location[];
+  year: number,
+  category: string;
+  share: number;
+  motivation: string;
+  affiliations: Location[];
 }
 
 export interface Laureate {
-  Id: string;
-  Firstname: string;
-  Surname: string;
-  Born: Date;
-  Died: string;
-  BornCountry: string;
-  BornCountryCode: string;
-  BornCity: string;
-  DiedCountry: string;
-  DiedCountryCode: string;
-  DiedCity: string;
-  Gender: string;
-  Prizes: Prize[];
+  id: string;
+  firstname: string;
+  surname: string;
+  born: Date;
+  died: string;
+  bornCountry: string;
+  bornCountryCode: string;
+  bornCity: string;
+  diedCountry: string;
+  diedCountryCode: string;
+  diedCity: string;
+  gender: string;
+  prizes: Prize[];
 }
 
 export interface Root {
