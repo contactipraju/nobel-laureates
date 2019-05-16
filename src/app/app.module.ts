@@ -1,5 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule }         from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { BrowserModule }    from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
     AppRoutingModule,
     NgxBootstrapSliderModule,
     BsDatepickerModule.forRoot()
+    RouterModule.forRoot([
+      { path: '', component: NobelsComponent, pathMatch: 'full' },
+      { path: 'nobels', component: NobelsComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
