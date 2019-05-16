@@ -18,7 +18,7 @@ import { NobelsComponent } from './nobels/nobels.component';
     BrowserModule,
     AppRoutingModule,
     NgxBootstrapSliderModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: NobelsComponent, pathMatch: 'full' },
       { path: 'nobels', component: NobelsComponent },
