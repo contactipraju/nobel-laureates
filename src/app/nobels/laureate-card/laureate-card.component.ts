@@ -9,9 +9,16 @@ import { Laureate } from '../nobels.model';
 export class LaureateCardComponent implements OnInit {
   @Input() laureate: Laureate;
 
+  ImageURL: string = '/assets/images/';
+
   constructor() { }
 
   ngOnInit() {
+    if (this.laureate.gender === "male") {
+      this.ImageURL = this.ImageURL + "avatar-male.png";
+    }
+    else {
+      this.ImageURL = this.ImageURL + "avatar-female.png";
+    }
   }
-
 }
