@@ -1,7 +1,53 @@
 .card {
   margin: 5px;
+  height: 300px;
 
   .card-body {
     padding: 1rem;
+
+    .card-header {
+      display: flex;
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+      }
+
+      .title {
+        flex-grow: 1;
+
+        .card-title-firstname {
+          font-size: 16px;
+        }
+
+        .card-title-surname {
+          font-size: 14px;
+          color: grey;
+        }
+      }
+    }
+
+    .card-details {
+      display: flex;
+      flex-direction: row;
+
+      & > div {
+        flex-grow: 1;
+        font-size: 10px;
+
+        .title {
+          font-size: 12px;
+        }
+        .date {
+
+        }
+        .city {
+
+        }
+        .country {
+
+        }
+      }
+    }
   }
 }

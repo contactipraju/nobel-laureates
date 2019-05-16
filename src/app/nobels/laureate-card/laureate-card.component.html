@@ -1,5 +1,28 @@
 <div class='card'>
   <div class="card-body">
-    <h3 class="card-title">{{laureate.firstname}}</h3>
+    <div class="card-header">
+      <img class="avatar" alt="{{laureate.firstname}}" title="{{laureate.firstname}}" [src]="[ImageURL]">
+
+      <div class="card-title">
+        <span class="card-title-firstname">{{laureate.firstname}}, </span>
+        <span class="card-title-surname">{{laureate.surname}}</span>
+      </div>
+    </div>
+
+    <div class="card-details clearfix">
+      <div class="born">
+        <div class="title">Born:</div>
+        <div class="date">{{laureate.born}}</div>
+        <div class="city">{{laureate.bornCity}}</div>
+        <div class="country">{{laureate.bornCountry}}</div>
+      </div>
+
+      <div class="died">
+        <div class="title">Died:</div>
+        <div class="date">{{laureate.died}}</div>
+        <div class="city">{{laureate.diedCity}}</div>
+        <div class="country">{{laureate.diedCountry}}</div>
+      </div>
+    </div>
   </div>
 </div>
