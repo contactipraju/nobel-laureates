@@ -16,12 +16,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { NobelsService } from './nobels/nobels.service';
 
 /* Components */
-import { NobelsComponent } from './nobels/nobels.component';
+import { NobelsComponent }       from './nobels/nobels.component';
+import { LaureateCardComponent } from './nobels/laureate-card/laureate-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NobelsComponent
+    NobelsComponent,
+    LaureateCardComponent
   ],
   imports: [
     BrowserModule,
