@@ -1,19 +1,19 @@
 .card {
   margin: 5px;
-  height: 300px;
 
   .card-body {
-    padding: 1rem;
+    padding: .5rem;
 
     .card-header {
       display: flex;
+      padding: 5px;
 
       .avatar {
         width: 60px;
         height: 60px;
       }
 
-      .title {
+      .card-title {
         flex-grow: 1;
 
         .card-title-firstname {
