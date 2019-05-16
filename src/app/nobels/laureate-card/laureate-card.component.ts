@@ -9,7 +9,7 @@ import { Laureate } from '../nobels.model';
 export class LaureateCardComponent implements OnInit {
   @Input() laureate: Laureate;
 
-  ImageURL: string = '/assets/images/';
+  ImageURL: string = './assets/images/';
 
   constructor() { }
 
