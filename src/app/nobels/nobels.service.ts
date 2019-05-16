@@ -19,11 +19,11 @@ export class NobelsService {
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl) {
   }
 
-  public getLocalNobels(): Observable<Laureates[]> {
+  public getLocalLaureates(): Observable<Laureates[]> {
     return this.http.get<Root>(this.baseUrl + 'assets/data/nobel-laureates.json')
       .pipe(
         map (x => x.laureates),
-        catchError(this.handleError('getLocalNobels', []))
+        catchError(this.handleError('getLocalLaureates', []))
       );
   }
 
