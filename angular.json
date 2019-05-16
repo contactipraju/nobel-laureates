@@ -143,5 +143,10 @@
       }
     }
   },
-  "defaultProject": "search-nobel-laureates"
+  "defaultProject": "search-nobel-laureates",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
