@@ -4,7 +4,7 @@ import { Laureate } from '../nobels.model';
 @Component({
   selector: 'app-laureate-card',
   templateUrl: './laureate-card.component.html',
-  styleUrls: ['./laureate-card.component.sass']
+  styleUrls: ['./laureate-card.component.scss']
 })
 export class LaureateCardComponent implements OnInit {
   @Input() laureate: Laureate;

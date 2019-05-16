@@ -5,7 +5,7 @@ import { Laureate }          from './nobels.model';
 @Component({
   selector: 'app-nobels',
   templateUrl: './nobels.component.html',
-  styleUrls: ['./nobels.component.sass']
+  styleUrls: ['./nobels.component.scss']
 })
 export class NobelsComponent implements OnInit {
 
