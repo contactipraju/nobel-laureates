@@ -20,6 +20,7 @@ export class Filter {
   country: string;
 
   area: string;
+  sortOn: string;
 
   constructor() {
     this.DefaultValues();
@@ -51,6 +52,7 @@ export class Filter {
     this.country = null;
 
     this.area = '';
+    this.sortOn = '';
   }
 
   allOptions() {
