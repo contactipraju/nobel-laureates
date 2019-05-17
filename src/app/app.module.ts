@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { NobelsService }      from './nobels/nobels.service';
 import { NobelFilterService } from './nobels/nobel-filter/nobel-filter.service';
 
+/* Filters */
+import { AreaPipe } from './nobels/nobel-filter/pipes/area.pipe';
+
 /* Components */
 import { NobelsComponent }       from './nobels/nobels.component';
 import { LaureateCardComponent } from './nobels/laureate-card/laureate-card.component';
@@ -32,7 +35,8 @@ import { ButtonGroupComponent }  from './nobels/nobel-filter/button-group/button
     LaureateCardComponent,
     NobelPrizeComponent,
     NobelFilterComponent,
-    ButtonGroupComponent
+    ButtonGroupComponent,
+    AreaPipe
   ],
   imports: [
     BrowserModule,
