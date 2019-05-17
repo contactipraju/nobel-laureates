@@ -1,9 +1,15 @@
 .prize {
+    display: flex;
+    flex-direction: row;
     color: grey;
+
+    padding: 5px;
     margin-bottom: 5px;
 
     .year-category {
+        min-width: 100px;
         font-size: 12px;
+        padding: 3px;
 
         .year {
         }
@@ -12,7 +18,9 @@
     }
 
     .motivation {
+        flex-grow: 1;
         font-size: 12px;
         font-style: italic;
+        padding: 3px;
     }
 }
