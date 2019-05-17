@@ -19,6 +19,8 @@ export class Filter {
   city: string;
   country: string;
 
+  area: string;
+
   constructor() {
     this.DefaultValues();
   }
@@ -47,6 +49,8 @@ export class Filter {
     this.name = null;
     this.city = null;
     this.country = null;
+
+    this.area = '';
   }
 
   allOptions() {
