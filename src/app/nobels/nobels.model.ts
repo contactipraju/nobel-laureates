@@ -5,7 +5,7 @@ export interface Location {
 }
 
 export interface Prize {
-  year: number,
+  year: number;
   category: string;
   share: number;
   motivation: string;
