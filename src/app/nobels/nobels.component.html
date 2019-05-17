@@ -6,10 +6,15 @@
 
     <div class="col-sm-6 col-md-8 col-lg-9 order-sm-first">
       <ng-container *ngIf="(laureates && laureates
-        | area : search.area
+        | area   : search.area
+        | sortOn : search.sortOn.key : search.sortOn.order
         ) as filteredLaureates">
 
-        <div class="filtered-laureate-count">{{filteredLaureates?.length}} laureates filtered</div>
+        <div *ngIf="filteredLaureates.length && filteredLaureates.length === laureates.length" class="filtered-laureate-count">{{laureates?.length}} laureates in total</div>
+        <div *ngIf="filteredLaureates.length && filteredLaureates.length !== laureates.length" class="filtered-laureate-count">
+          {{filteredLaureates?.length}} laureates filtered out of {{laureates?.length}}
+          <span id="reset-filters" (click)="onResetFilters()">Reset Filters</span>
+        </div>
 
         <div class="card-deck">
           <app-laureate-card class="kard" *ngFor="let laureate of filteredLaureates" [laureate]="laureate"></app-laureate-card>
