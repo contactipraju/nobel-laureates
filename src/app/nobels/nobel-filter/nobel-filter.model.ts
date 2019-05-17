@@ -20,11 +20,11 @@ export class Filter {
   country: string;
 
   constructor() {
-      this.DefaultValues();
+    this.DefaultValues();
   }
 
   Reset() {
-      this.DefaultValues();
+    this.DefaultValues();
   }
 
   DefaultValues() {
@@ -47,5 +47,37 @@ export class Filter {
     this.name = null;
     this.city = null;
     this.country = null;
+  }
+
+  allOptions() {
+    return {
+      firstname:  { id: 'firstname', label: 'First name',       image: 'nobel-firstname' },
+      born:       { id: 'born',      label: 'Born between',     image: 'nobel-dob' },
+      died:       { id: 'died',      label: 'Died between',     image: 'nobel-dod' },
+      awarded:    { id: 'awarded',   label: 'Awarded in',       image: 'nobel-awarded' },
+      count:      { id: 'count',     label: 'Number of Awards', image: 'nobel-awards' },
+
+      sortOn: {
+        born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year'},
+        died:  { id: 'sortOn', field: 'died',  key: 'died',  label: 'Death Year'},
+        year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded'},
+        count: { id: 'sortOn', field: 'count', key: 'count', label: 'Number of Awards'}
+      },
+
+      area: {
+        id: 'area',
+        label: 'Field',
+        buttonsInRow: 3,
+        multiselect: true,
+        options: [
+          { value: 'physics',    text: 'Physics' },
+          { value: 'chemistry',  text: 'Chemistry' },
+          { value: 'medicine',   text: 'Medicine' },
+          { value: 'peace',      text: 'Peace' },
+          { value: 'literature', text: 'Literature' },
+          { value: 'economics',  text: 'Economics' }
+        ]
+      },
+    };
   }
 }
