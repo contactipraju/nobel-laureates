@@ -1,6 +1,4 @@
-/* TODO: Move these definitions to a separate file */
-$SelectedColor: #3fb498;
-$DefaultColor: #1a345b;
+@import '../../../../assets/scss/variables';
 
 .btn-group-container {
     display: block;
