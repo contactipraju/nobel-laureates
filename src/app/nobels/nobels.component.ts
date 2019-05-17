@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NobelsService }     from './nobels.service';
 import { Laureate }          from './nobels.model';
+import { Filter }            from './nobel-filter/nobel-filter.model';
 
 @Component({
   selector: 'app-nobels',
@@ -14,6 +15,7 @@ export class NobelsComponent implements OnInit {
 
   laureates: Laureate[];
   laureatesLoaded: boolean = false;
+  search = new Filter();
 
   ngOnInit() {
     this.loadLaureates();
@@ -24,5 +26,9 @@ export class NobelsComponent implements OnInit {
       this.laureates = result;
       this.laureatesLoaded = true;
     });
+  }
+
+  onFilterChanged(search: Filter) {
+    this.search = search;
   }
 }
