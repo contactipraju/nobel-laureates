@@ -13,19 +13,22 @@ import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 /* Services */
-import { NobelsService } from './nobels/nobels.service';
+import { NobelsService }      from './nobels/nobels.service';
+import { NobelFilterService } from './nobels/nobel-filter/nobel-filter.service';
 
 /* Components */
 import { NobelsComponent }       from './nobels/nobels.component';
 import { LaureateCardComponent } from './nobels/laureate-card/laureate-card.component';
-import { NobelPrizeComponent } from './nobels/laureate-card/nobel-prize/nobel-prize.component';
+import { NobelPrizeComponent }   from './nobels/laureate-card/nobel-prize/nobel-prize.component';
+import { NobelFilterComponent }  from './nobels/nobel-filter/nobel-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NobelsComponent,
     LaureateCardComponent,
-    NobelPrizeComponent
+    NobelPrizeComponent,
+    NobelFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { NobelPrizeComponent } from './nobels/laureate-card/nobel-prize/nobel-pr
       { path: 'nobels', component: NobelsComponent }
     ])
   ],
-  providers: [NobelsService],
+  providers: [NobelsService, NobelFilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
