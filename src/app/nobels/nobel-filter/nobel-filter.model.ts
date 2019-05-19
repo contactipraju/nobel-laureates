@@ -65,9 +65,9 @@ export class Filter {
 
       sortOn: {
         born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year'},
-        died:  { id: 'sortOn', field: 'died',  key: 'died',  label: 'Death Year'},
         year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded'},
-        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards'}
+        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards'},
+        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age'}
       },
 
       area: {
