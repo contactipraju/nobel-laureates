@@ -5,7 +5,7 @@ export interface Location {
 }
 
 export interface Prize {
-  year: number,
+  year: number;
   category: string;
   share: number;
   motivation: string;
@@ -16,7 +16,7 @@ export interface Laureate {
   id: string;
   firstname: string;
   surname: string;
-  born: Date;
+  born: string;
   died: string;
   bornCountry: string;
   bornCountryCode: string;
