@@ -36,6 +36,11 @@ export class NobelFilterComponent implements OnInit {
         this.filterInputs.area = Object.assign({}, $event.value);
         this.onSearchChange();
       break;
+
+      case 'sortOn':
+        this.filterInputs.sortOn = $event;
+        this.onSearchChange();
+      break;
     }
   }
 

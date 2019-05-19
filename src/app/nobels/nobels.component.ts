@@ -21,9 +21,13 @@ export class NobelsComponent implements OnInit {
     this.loadLaureates();
   }
 
+  processLaureates() {
+  }
+
   loadLaureates() {
     this.nobelsService.getLocalLaureates().subscribe(result => {
       this.laureates = result;
+      this.processLaureates();
       this.laureatesLoaded = true;
     });
   }

@@ -20,6 +20,7 @@ export class Filter {
   country: string;
 
   area: string;
+  sortOn: string;
 
   constructor() {
     this.DefaultValues();
@@ -51,6 +52,7 @@ export class Filter {
     this.country = null;
 
     this.area = '';
+    this.sortOn = '';
   }
 
   allOptions() {
@@ -63,14 +65,14 @@ export class Filter {
 
       sortOn: {
         born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year'},
-        died:  { id: 'sortOn', field: 'died',  key: 'died',  label: 'Death Year'},
         year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded'},
-        count: { id: 'sortOn', field: 'count', key: 'count', label: 'Number of Awards'}
+        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards'},
+        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age'}
       },
 
       area: {
         id: 'area',
-        label: 'Field',
+        title: 'Field:',
         buttonsInRow: 3,
         multiselect: true,
         options: [

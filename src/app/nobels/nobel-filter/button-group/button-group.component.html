@@ -1,6 +1,6 @@
 <div class="btn-group-container">
-  <div class="btn-group-container-label">
-    {{data.label}}
+  <div *ngIf="data.title" class="btn-group-container-label">
+    {{data.title}}
   </div>
 
   <div class="btn-group" *ngIf="!data.multiselect" btnRadioGroup [(ngModel)]="selection" ngDefaultControl>
