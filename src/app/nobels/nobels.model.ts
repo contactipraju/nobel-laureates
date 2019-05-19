@@ -16,7 +16,7 @@ export interface Laureate {
   id: string;
   firstname: string;
   surname: string;
-  born: Date;
+  born: string;
   died: string;
   bornCountry: string;
   bornCountryCode: string;
