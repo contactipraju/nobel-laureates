@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import * as moment  from 'moment';
 import { Laureate } from '../../nobels.model';
 
 @Pipe({
@@ -23,6 +24,12 @@ export class SortOnPipe implements PipeTransform {
       _type = typeof items[0],
       _flag = _isArr && _type === 'object' ? true : _isArr && _type !== 'object' ? false : true;
 
+      let getAgeInDays = function(person: Laureate) {
+        var _born = moment(person.born, 'YYYY-MM-DD');
+        var _year = moment(person['prizes'][0].year, 'YYYY');
+        return _year.diff(_born, 'days');
+      }
+
       items.sort((_a, _b) => {
         let a: any, b: any;
 
@@ -33,6 +40,10 @@ export class SortOnPipe implements PipeTransform {
         else if(prop === 'count') {
           a = _a['prizes'].length;
           b = _b['prizes'].length;
+        }
+        else if(prop === 'age') {
+          a = getAgeInDays(_a);
+          b = getAgeInDays(_b);
         }
         else {
           a = _flag ? _a[prop] : _a;
