@@ -20,7 +20,7 @@ export class Filter {
   country: string;
 
   area: string;
-  sortOn: string;
+  sortOn: any;
 
   constructor() {
     this.DefaultValues();
@@ -52,7 +52,9 @@ export class Filter {
     this.country = null;
 
     this.area = '';
-    this.sortOn = '';
+
+    // make the Year Awarded as the default sorting order
+    this.sortOn = this.allOptions().sortOn.year;
   }
 
   allOptions() {
