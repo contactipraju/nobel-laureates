@@ -9,5 +9,8 @@
     <app-sort-button class="sort-component" (emitter)="filterEventHandler($event)" [selected]='filterInputs.sortOn' [data]='allFilters.sortOn.age'></app-sort-button>
   </div>
 
+  <div class="group-container-label">Name:</div>
+  <app-input-string (emitter)="filterEventHandler($event)" [data]='allFilters.name'></app-input-string>
+
   <app-button-group (emitter)="filterEventHandler($event)" [data]='allFilters.area'></app-button-group>
 </div>

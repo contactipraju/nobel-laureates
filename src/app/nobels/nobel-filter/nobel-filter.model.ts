@@ -1,6 +1,4 @@
 export class Filter {
-  firstname: string;
-  surname: string;
   born: Date;
   died: string;
   bornCountry: string;
@@ -31,8 +29,6 @@ export class Filter {
   }
 
   DefaultValues() {
-    this.firstname = null;
-    this.surname = null;
     this.born = null;
     this.died = null;
     this.bornCountry = null;
@@ -59,17 +55,17 @@ export class Filter {
 
   allOptions() {
     return {
-      firstname:  { id: 'firstname', label: 'First name',       image: 'nobel-firstname' },
-      born:       { id: 'born',      label: 'Born between',     image: 'nobel-dob' },
-      died:       { id: 'died',      label: 'Died between',     image: 'nobel-dod' },
-      awarded:    { id: 'awarded',   label: 'Awarded in',       image: 'nobel-awarded' },
-      count:      { id: 'count',     label: 'Number of Awards', image: 'nobel-awards' },
+      name:    { id: 'name',    label: 'Name',             image: 'nobel-firstname' },
+      born:    { id: 'born',    label: 'Born between',     image: 'nobel-dob' },
+      died:    { id: 'died',    label: 'Died between',     image: 'nobel-dod' },
+      awarded: { id: 'awarded', label: 'Awarded in',       image: 'nobel-awarded' },
+      count:   { id: 'count',   label: 'Number of Awards', image: 'nobel-awards' },
 
       sortOn: {
-        born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year'},
-        year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded'},
-        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards'},
-        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age'}
+        born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year' },
+        year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded' },
+        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards' },
+        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age' }
       },
 
       area: {
