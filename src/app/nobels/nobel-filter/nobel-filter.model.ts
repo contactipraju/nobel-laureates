@@ -7,7 +7,8 @@ export class Filter {
   diedCountry: string;
   diedCountryCode: string;
   diedCity: string;
-  gender: string;
+
+  gender: object;
 
   year: number;
   category: string;
@@ -37,7 +38,12 @@ export class Filter {
     this.diedCountry = null;
     this.diedCountryCode = null;
     this.diedCity = null;
-    this.gender = null;
+
+    // Show all genders by default
+    this.gender = {
+      male: true,
+      female: true
+    };
   
     this.year = null;
     this.category = null;
@@ -68,10 +74,22 @@ export class Filter {
         age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age' }
       },
 
+      gender: {
+        id: 'gender',
+        title: 'Gender:',
+        buttonsInRow: 3,
+        multiselect: true,
+        options: [
+          { value: 'male',    text: 'Male',           image: 'fa fa-male' },
+          { value: 'female',  text: 'Female',         image: 'fa fa-female' },
+          { value: 'org',     text: 'Organization',   image: 'fa fa-atom' }
+        ]
+      },
+
       area: {
         id: 'area',
         title: 'Field:',
-        buttonsInRow: 3,
+        buttonsInRow: 2,
         multiselect: true,
         options: [
           { value: 'physics',    text: 'Physics' },
@@ -81,7 +99,7 @@ export class Filter {
           { value: 'literature', text: 'Literature' },
           { value: 'economics',  text: 'Economics' }
         ]
-      },
+      }
     };
   }
 }

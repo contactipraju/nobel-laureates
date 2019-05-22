@@ -12,5 +12,7 @@
   <div class="group-container-label">Name:</div>
   <app-input-string (emitter)="filterEventHandler($event)" [data]='allFilters.name'></app-input-string>
 
+  <app-button-group (emitter)="filterEventHandler($event)" [data]='allFilters.gender'></app-button-group>
+
   <app-button-group (emitter)="filterEventHandler($event)" [data]='allFilters.area'></app-button-group>
 </div>
