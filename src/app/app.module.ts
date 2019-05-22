@@ -42,11 +42,11 @@ import { SortButtonComponent }   from './nobels/nobel-filter/sort-button/sort-bu
     NobelFilterComponent,
     InputStringComponent,
     ButtonGroupComponent,
+    SortButtonComponent,
     AreaPipe,
     GenderPipe,
     SortOnPipe,
-    LaureateNamePipe,
-    SortButtonComponent
+    LaureateNamePipe
   ],
   imports: [
     BrowserModule,

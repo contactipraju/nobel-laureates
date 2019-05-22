@@ -8,9 +8,8 @@
         (click)="onBtn()"
         btnRadio="{{option.value}}"
         [style.width.%]="width">
-        <span>{{option.text}}</span>
-        <span *ngIf="option.text2"><br/>{{option.text2}}</span>
         <i class="icon" [ngClass]="option.image"></i>
+        <span>{{option.text}}</span>
     </label>
   </div>
 
@@ -19,7 +18,7 @@
         (click)="onCheck()"
         [(ngModel)]="checkModel[option.value]"
         [style.width.%]="width">
-
+        <i class="icon" [ngClass]="option.image"></i>
         {{option.text}}
     </label>
   </div>
