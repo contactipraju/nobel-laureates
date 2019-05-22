@@ -19,14 +19,17 @@ import { NobelsService }      from './nobels/nobels.service';
 import { NobelFilterService } from './nobels/nobel-filter/nobel-filter.service';
 
 /* Filters */
-import { AreaPipe }   from './nobels/nobel-filter/pipes/area.pipe';
-import { SortOnPipe } from './nobels/nobel-filter/pipes/sort-on.pipe';
+import { AreaPipe }         from './nobels/nobel-filter/pipes/area.pipe';
+import { GenderPipe }       from './nobels/nobel-filter/pipes/gender.pipe';
+import { SortOnPipe }       from './nobels/nobel-filter/pipes/sort-on.pipe';
+import { LaureateNamePipe } from './nobels/nobel-filter/pipes/laureate-name.pipe';
 
 /* Components */
 import { NobelsComponent }       from './nobels/nobels.component';
 import { LaureateCardComponent } from './nobels/laureate-card/laureate-card.component';
 import { NobelPrizeComponent }   from './nobels/laureate-card/nobel-prize/nobel-prize.component';
 import { NobelFilterComponent }  from './nobels/nobel-filter/nobel-filter.component';
+import { InputStringComponent }  from './nobels/nobel-filter/input-string/input-string.component';
 import { ButtonGroupComponent }  from './nobels/nobel-filter/button-group/button-group.component';
 import { SortButtonComponent }   from './nobels/nobel-filter/sort-button/sort-button.component';
 
@@ -37,10 +40,13 @@ import { SortButtonComponent }   from './nobels/nobel-filter/sort-button/sort-bu
     LaureateCardComponent,
     NobelPrizeComponent,
     NobelFilterComponent,
+    InputStringComponent,
     ButtonGroupComponent,
+    SortButtonComponent,
     AreaPipe,
+    GenderPipe,
     SortOnPipe,
-    SortButtonComponent
+    LaureateNamePipe
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,16 @@ export class NobelFilterComponent implements OnInit {
     console.log("filterEventHandler", $event);
 
     switch($event.id) {
+      case 'name':
+        this.filterInputs.name = $event.value;
+        this.onSearchChange();
+      break;
+
+      case 'gender':
+        this.filterInputs.gender = Object.assign({}, $event.value);
+        this.onSearchChange();
+      break;
+
       case 'area':
         this.filterInputs.area = Object.assign({}, $event.value);
         this.onSearchChange();

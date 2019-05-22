@@ -1,6 +1,4 @@
 export class Filter {
-  firstname: string;
-  surname: string;
   born: Date;
   died: string;
   bornCountry: string;
@@ -9,7 +7,8 @@ export class Filter {
   diedCountry: string;
   diedCountryCode: string;
   diedCity: string;
-  gender: string;
+
+  gender: object;
 
   year: number;
   category: string;
@@ -20,7 +19,7 @@ export class Filter {
   country: string;
 
   area: string;
-  sortOn: string;
+  sortOn: any;
 
   constructor() {
     this.DefaultValues();
@@ -31,8 +30,6 @@ export class Filter {
   }
 
   DefaultValues() {
-    this.firstname = null;
-    this.surname = null;
     this.born = null;
     this.died = null;
     this.bornCountry = null;
@@ -41,7 +38,12 @@ export class Filter {
     this.diedCountry = null;
     this.diedCountryCode = null;
     this.diedCity = null;
-    this.gender = null;
+
+    // Show all genders by default
+    this.gender = {
+      male: true,
+      female: true
+    };
   
     this.year = null;
     this.category = null;
@@ -52,28 +54,42 @@ export class Filter {
     this.country = null;
 
     this.area = '';
-    this.sortOn = '';
+
+    // make the Year Awarded as the default sorting order
+    this.sortOn = this.allOptions().sortOn.year;
   }
 
   allOptions() {
     return {
-      firstname:  { id: 'firstname', label: 'First name',       image: 'nobel-firstname' },
-      born:       { id: 'born',      label: 'Born between',     image: 'nobel-dob' },
-      died:       { id: 'died',      label: 'Died between',     image: 'nobel-dod' },
-      awarded:    { id: 'awarded',   label: 'Awarded in',       image: 'nobel-awarded' },
-      count:      { id: 'count',     label: 'Number of Awards', image: 'nobel-awards' },
+      name:    { id: 'name',    label: 'Name',             image: 'nobel-firstname' },
+      born:    { id: 'born',    label: 'Born between',     image: 'nobel-dob' },
+      died:    { id: 'died',    label: 'Died between',     image: 'nobel-dod' },
+      awarded: { id: 'awarded', label: 'Awarded in',       image: 'nobel-awarded' },
+      count:   { id: 'count',   label: 'Number of Awards', image: 'nobel-awards' },
 
       sortOn: {
-        born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year'},
-        year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded'},
-        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards'},
-        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age'}
+        born:  { id: 'sortOn', field: 'born',  key: 'born',  label: 'Birth Year' },
+        year:  { id: 'sortOn', field: 'year',  key: 'year',  label: 'Year Awarded' },
+        count: { id: 'sortOn', field: 'count', key: 'count', label: 'No. Awards' },
+        age:   { id: 'sortOn', field: 'age',   key: 'age',   label: 'Awarded Age' }
+      },
+
+      gender: {
+        id: 'gender',
+        title: 'Gender:',
+        buttonsInRow: 3,
+        multiselect: true,
+        options: [
+          { value: 'male',    text: 'Male',           image: 'fa fa-male' },
+          { value: 'female',  text: 'Female',         image: 'fa fa-female' },
+          { value: 'org',     text: 'Organization',   image: 'fa fa-atom' }
+        ]
       },
 
       area: {
         id: 'area',
         title: 'Field:',
-        buttonsInRow: 3,
+        buttonsInRow: 2,
         multiselect: true,
         options: [
           { value: 'physics',    text: 'Physics' },
@@ -83,7 +99,7 @@ export class Filter {
           { value: 'literature', text: 'Literature' },
           { value: 'economics',  text: 'Economics' }
         ]
-      },
+      }
     };
   }
 }
