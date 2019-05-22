@@ -88,7 +88,7 @@ export class Filter {
       area: {
         id: 'area',
         title: 'Field:',
-        buttonsInRow: 3,
+        buttonsInRow: 2,
         multiselect: true,
         options: [
           { value: 'physics',    text: 'Physics' },
@@ -98,7 +98,7 @@ export class Filter {
           { value: 'literature', text: 'Literature' },
           { value: 'economics',  text: 'Economics' }
         ]
-      },
+      }
     };
   }
 }
