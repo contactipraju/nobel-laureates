@@ -19,8 +19,9 @@ import { NobelsService }      from './nobels/nobels.service';
 import { NobelFilterService } from './nobels/nobel-filter/nobel-filter.service';
 
 /* Filters */
-import { AreaPipe }   from './nobels/nobel-filter/pipes/area.pipe';
-import { SortOnPipe } from './nobels/nobel-filter/pipes/sort-on.pipe';
+import { AreaPipe }         from './nobels/nobel-filter/pipes/area.pipe';
+import { SortOnPipe }       from './nobels/nobel-filter/pipes/sort-on.pipe';
+import { LaureateNamePipe } from './nobels/nobel-filter/pipes/laureate-name.pipe';
 
 /* Components */
 import { NobelsComponent }       from './nobels/nobels.component';
@@ -42,6 +43,7 @@ import { SortButtonComponent }   from './nobels/nobel-filter/sort-button/sort-bu
     ButtonGroupComponent,
     AreaPipe,
     SortOnPipe,
+    LaureateNamePipe,
     SortButtonComponent
   ],
   imports: [
