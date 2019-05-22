@@ -41,8 +41,9 @@ export class Filter {
 
     // Show all genders by default
     this.gender = {
-      male: true,
-      female: true
+      male: false,
+      female: false,
+      org: false
     };
   
     this.year = null;

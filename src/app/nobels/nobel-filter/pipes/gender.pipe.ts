@@ -27,9 +27,9 @@ export class GenderPipe implements PipeTransform {
       }
 
       if(
-        (it.gender === 'male' && genderFilter['male'] !== true) ||
+        (it.gender === 'male'   && genderFilter['male'] !== true) ||
         (it.gender === 'female' && genderFilter['female'] !== true) ||
-        (it.gender === 'org' && genderFilter['org'] !== true)
+        (it.gender === 'org'    && genderFilter['org'] !== true)
         ) {
         return false;
       }
