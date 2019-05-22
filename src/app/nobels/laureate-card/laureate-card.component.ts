@@ -17,8 +17,11 @@ export class LaureateCardComponent implements OnInit {
     if (this.laureate.gender === "male") {
       this.ImageURL = this.ImageURL + "avatar-male.png";
     }
-    else {
+    else if (this.laureate.gender === "female") {
       this.ImageURL = this.ImageURL + "avatar-female.png";
+    }
+    else {
+      this.ImageURL = this.ImageURL + "avatar-org.png";
     }
   }
 }

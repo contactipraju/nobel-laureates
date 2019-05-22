@@ -77,11 +77,12 @@ export class Filter {
       gender: {
         id: 'gender',
         title: 'Gender:',
-        buttonsInRow: 2,
+        buttonsInRow: 3,
         multiselect: true,
         options: [
-          { value: 'male',    text: 'Male',   image: 'fa fa-male' },
-          { value: 'female',  text: 'Female', image: 'fa fa-female' }
+          { value: 'male',    text: 'Male',           image: 'fa fa-male' },
+          { value: 'female',  text: 'Female',         image: 'fa fa-female' },
+          { value: 'org',     text: 'Organization',   image: 'fa fa-atom' }
         ]
       },
 

@@ -19,12 +19,18 @@ export class GenderPipe implements PipeTransform {
         return false;
       }
 
-      // If BOTH or NONE are selected, show everything
-      if((genderFilter['male'] === true && genderFilter['female'] === true) || (genderFilter['male'] !== true && genderFilter['female'] !== true)) {
+      // If ALL or NONE are selected, show everything
+      if(
+        (genderFilter['male'] === true && genderFilter['female'] === true && genderFilter['org'] === true) ||
+        (genderFilter['male'] !== true && genderFilter['female'] !== true && genderFilter['org'] !== true)) {
         return true;
       }
 
-      if((it.gender === 'male' && genderFilter['male'] !== true) || (it.gender === 'female' && genderFilter['female'] !== true)) {
+      if(
+        (it.gender === 'male' && genderFilter['male'] !== true) ||
+        (it.gender === 'female' && genderFilter['female'] !== true) ||
+        (it.gender === 'org' && genderFilter['org'] !== true)
+        ) {
         return false;
       }
       else {
