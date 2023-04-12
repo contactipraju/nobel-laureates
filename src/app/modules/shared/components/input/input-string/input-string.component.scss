@@ -1,0 +1,30 @@
+@import "variables";
+
+.input-string-container {
+	padding: 5px;
+
+	.is-form-group {
+		display: flex;
+		cursor: pointer;
+
+		padding: 5px;
+		margin-bottom: 5px;
+		border-radius: 0.25rem;
+		border: 1px solid #ced4da;
+
+		i.is-form-control-icon {
+			color: #555;
+			padding: 5px;
+			padding-right: 10px;
+		}
+
+		.is-form-control {
+			flex-grow: 1;
+			border: none;
+			outline: none;
+
+			color: #555;
+			font-size: 14px;
+		}
+	}
+}

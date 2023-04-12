@@ -1,0 +1,11 @@
+<div class="input-string-container">
+  <div class="is-form-group clearfix">
+    <i class="is-form-control-icon pull-left nobel-icon fas fa-search"></i>
+    <input type="search" aria-label="Search" class="is-form-control pull-left"
+      name="{{data.id}}"
+      placeholder="{{data.label}}"
+      [(ngModel)]="value"
+      (ngModelChange)="onValueChange()"
+    >
+  </div>
+</div>
