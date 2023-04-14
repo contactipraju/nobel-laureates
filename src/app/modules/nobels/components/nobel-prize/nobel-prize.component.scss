@@ -22,5 +22,12 @@
         font-size: 12px;
         font-style: italic;
         padding: 3px;
+
+		/* show only 3 lines, add 3 dots at the end */
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
     }
 }
