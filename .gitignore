@@ -38,6 +38,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.firebase/hosting.cHVibGlj.cache
+.firebase/hosting.ZGlzdA.cache
 .angular/cache
 
 # System Files
