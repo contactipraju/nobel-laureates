@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/search-nobel-laureates",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
