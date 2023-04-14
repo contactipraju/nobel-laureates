@@ -1,4 +1,4 @@
-# SearchNobelLaureates
+# Nobel Laureates
 
 
 ## Build
