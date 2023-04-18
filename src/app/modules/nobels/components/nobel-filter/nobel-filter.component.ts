@@ -39,12 +39,12 @@ export class NobelFilterComponent implements OnInit {
 			break;
 
 			case 'gender':
-				this.filterInputs.gender = Object.assign({}, $event.value);
+				this.filterInputs.gender = Object.assign({}, this.onlyTrueValues($event.id, $event.value));
 				this.onSearchChange();
 			break;
 
 			case 'area':
-				this.filterInputs.area = Object.assign({}, $event.value);
+				this.filterInputs.area = Object.assign({}, this.onlyTrueValues($event.id, $event.value));
 				this.onSearchChange();
 			break;
 
@@ -53,6 +53,18 @@ export class NobelFilterComponent implements OnInit {
 				this.onSearchChange();
 			break;
 		}
+	}
+
+	onlyTrueValues(id: string, obj: any) {
+		console.log("NobelFilterComponent - onlyTrueValues: ", id, obj);
+
+		for(var key in obj) {
+			if (!obj[key]) {
+				delete obj[key];
+			}
+		}
+
+		return obj;
 	}
 
 	onSearchChange() {
