@@ -1,34 +1,34 @@
 <div class='card'>
-  <div class="card-body">
-    <div class="card-header">
-      <img class="avatar" alt="{{person.firstname}}" title="{{person.firstname}}" [src]="[ImageURL]">
+	<div class="card-body">
+		<div class="card-header">
+			<img class="avatar" alt="{{person.firstname}}" title="{{person.firstname}}" [src]="[ImageURL]">
 
-      <div class="header-content">
-        <div class="card-title">
-          <span class="card-title-firstname">{{person.firstname}}, </span>
-          <span class="card-title-surname">{{person.surname}}</span>
-        </div>
+			<div class="header-content">
+				<div class="card-title">
+					<span class="card-title-firstname">{{person.firstname}}, </span>
+					<span class="card-title-surname">{{person.surname}}</span>
+				</div>
 
-        <div class="card-details">
-          <div class="born">
-            <span class="title">Born: </span>
-            <span class="date">{{person.born}}</span>
-            <span class="city">, {{person.bornCity}}</span>
-            <span class="country">, {{person.bornCountry}}</span>
-          </div>
+				<div class="card-details">
+					<div class="born">
+						<span class="title">Born: </span>
+						<span class="date">{{person.born}}</span>
+						<span class="city">, {{person.bornCity}}</span>
+						<span class="country">, {{person.bornCountry}}</span>
+					</div>
 
-          <div class="died">
-            <span class="title">Died: </span>
-            <span class="date">{{person.died}}</span>
-            <span class="city">, {{person.diedCity}}</span>
-            <span class="country">, {{person.diedCountry}}</span>
-          </div>
-        </div>
-      </div>
-    </div>
+					<div class="died">
+						<span class="title">Died: </span>
+						<span class="date">{{person.died}}</span>
+						<span class="city">, {{person.diedCity}}</span>
+						<span class="country">, {{person.diedCountry}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="main-content">
-      <app-nobel-prize class="nobel-prize" *ngFor="let prize of person.prizes" [prize]="prize"></app-nobel-prize>
-    </div>
-  </div>
+		<div class="main-content">
+			<app-nobel-prize class="nobel-prize" *ngFor="let prize of person.prizes" [prize]="prize"></app-nobel-prize>
+		</div>
+	</div>
 </div>

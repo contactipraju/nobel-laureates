@@ -18,10 +18,12 @@ export class LaureateNamePipe implements PipeTransform {
 		search = search.toLowerCase();
 
 		return items.filter( it => {
-			if((it.firstname && it.firstname.toLowerCase().includes(search)) || (it.surname && it.surname.toLowerCase().includes(search)))
+			if((it.firstname && it.firstname.toLowerCase().includes(search)) || (it.surname && it.surname.toLowerCase().includes(search))) {
 				return true;
-			else
+			}
+			else {
 				return false;
+			}
 		});
 	}
 }

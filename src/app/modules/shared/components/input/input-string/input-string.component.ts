@@ -7,36 +7,36 @@ import { Subscription }            from 'rxjs';
 import { FilterService } from '../../../services/filter.service';
 
 @Component({
-  selector: 'app-input-string',
-  templateUrl: './input-string.component.html',
-  styleUrls: ['./input-string.component.scss']
+	selector: 'app-input-string',
+	templateUrl: './input-string.component.html',
+	styleUrls: ['./input-string.component.scss']
 })
 
 export class InputStringComponent implements OnInit, OnDestroy {
-  @Input() data: any;
-  @Output() emitter = new EventEmitter<object>();
+	@Input() data: any;
+	@Output() emitter = new EventEmitter<object>();
 
-  value: string;
-  subscription: Subscription;
+	value: string;
+	subscription: Subscription;
 
-  constructor(private filterService: FilterService) {
-    this.subscription = filterService.resetFilters$.subscribe(
-      message => {
-        if(message === 'reset') {
-          this.value = '';
-        }
-      }
-    );
-  }
+	constructor(private filterService: FilterService) {
+		this.subscription = filterService.resetFilters$.subscribe(
+			message => {
+				if(message === 'reset') {
+					this.value = '';
+				}
+			}
+		);
+	}
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+	ngOnDestroy() {
+		this.subscription.unsubscribe();
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
-  onValueChange() {
-    this.emitter.emit({id: this.data.id, value: this.value});
-  }
+	onValueChange() {
+		this.emitter.emit({id: this.data.id, value: this.value});
+	}
 }
