@@ -1,7 +1,7 @@
 export interface IGender {
-	male: boolean;
-	female: boolean;
-	org: boolean;
+	male?: boolean;
+	female?: boolean;
+	org?: boolean;
 }
 
 export class Filter {
@@ -24,7 +24,7 @@ export class Filter {
 	city: string;
 	country: string;
 
-	area: string;
+	area: any;
 	sortOn: any;
 
 	constructor() {
@@ -60,7 +60,7 @@ export class Filter {
 		this.city = '';
 		this.country = '';
 
-		this.area = '';
+		this.area = null;
 
 		// make the Year Awarded as the default sorting order
 		this.sortOn = this.allOptions().sortOn.year;

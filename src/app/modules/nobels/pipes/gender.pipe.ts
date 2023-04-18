@@ -21,10 +21,9 @@ export class GenderPipe implements PipeTransform {
 				return false;
 			}
 
-			// If ALL or NONE are selected, show everything
-			if(
-				(genderFilter['male'] === true && genderFilter['female'] === true && genderFilter['org'] === true) ||
-				(genderFilter['male'] !== true && genderFilter['female'] !== true && genderFilter['org'] !== true)) {
+			// If ALL/NONE selected.., just display everything [Remove hard-coded number later]
+			let selections = Object.keys(genderFilter).length;
+			if(!selections || selections === 3) {
 				return true;
 			}
 

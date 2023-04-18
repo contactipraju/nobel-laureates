@@ -7,34 +7,40 @@ import { Laureate } from '../models/nobels.model';
 })
 export class AreaPipe implements PipeTransform {
 
-  transform(items: Laureate[], areaFilter?: any): Laureate[] {
-    if (!items) {
-      return [];
-    }
+	transform(items: Laureate[], areaFilter?: any): Laureate[] {
+		if (!items) {
+			return [];
+		}
 
-    if ((!areaFilter)) {
-      return items;
-    }
+		if ((!areaFilter)) {
+			return items;
+		}
 
-    return items.filter(it => {
-      if(!it.prizes || !it.prizes.length) {
-        return false;
-      }
+		return items.filter(it => {
+			if(!it.prizes || !it.prizes.length) {
+				return false;
+			}
 
-      // For each selected area..
-      for (var key in areaFilter) {
-        if (areaFilter.hasOwnProperty(key)) {
+			// If ALL/NONE selected.., just display everything [Remove hard-coded number later]
+			let selections = Object.keys(areaFilter).length;
+			if(!selections || selections === 6) {
+				return true;
+			}
 
-          // For each prize..
-          for(let i=0; i<it.prizes.length; i++) {
-            if(areaFilter[key] === true && it.prizes[i].category === key) {
-              return true;
-            }
-          }
-        }
-      }
+			// For each selected area..
+			for (var key in areaFilter) {
+				if (areaFilter.hasOwnProperty(key)) {
 
-      return false;
-    });
-  }
+					// For each prize..
+					for(let i=0; i<it.prizes.length; i++) {
+						if(areaFilter[key] === true && it.prizes[i].category === key) {
+							return true;
+						}
+					}
+				}
+			}
+
+			return false;
+		});
+	}
 }
