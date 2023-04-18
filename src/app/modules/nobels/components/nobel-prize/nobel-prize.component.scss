@@ -1,27 +1,27 @@
 .prize {
-    display: flex;
-    flex-direction: row;
-    color: grey;
+	display: flex;
+	flex-direction: row;
+	color: grey;
 
-    padding: 5px;
-    min-height: 70px;
+	padding: 5px;
+	min-height: 70px;
 
-    .year-category {
-        min-width: 100px;
-        font-size: 12px;
-        padding: 3px;
+	.year-category {
+		min-width: 100px;
+		font-size: 12px;
+		padding: 3px;
 
-        .year {
-        }
-        .category {
-        }
-    }
+		.year {
+		}
+		.category {
+		}
+	}
 
-    .motivation {
-        flex-grow: 1;
-        font-size: 12px;
-        font-style: italic;
-        padding: 3px;
+	.motivation {
+		flex-grow: 1;
+		font-size: 12px;
+		font-style: italic;
+		padding: 3px;
 
 		/* show only 3 lines, add 3 dots at the end */
 		display: -webkit-box;
@@ -29,5 +29,5 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;
-    }
+	}
 }
