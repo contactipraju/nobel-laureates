@@ -4,8 +4,9 @@ import { CommonModule }     from '@angular/common';
 import { FormsModule }      from '@angular/forms';
 
 /* Modules */
-import { SharedModule }        from '@app/modules/shared/shared.module';
 import { NobelsRoutingModule } from '@app/modules/nobels/nobels-routing.module';
+import { SharedModule }        from '@app/modules/shared/shared.module';
+import { TooltipModule }       from '@app/modules/tooltip/tooltip.module';
 
 /* Services */
 import { NobelsService }      from './services/nobels.service';
@@ -43,8 +44,9 @@ const components = [
 	imports: [
 		CommonModule,
 		FormsModule,
+		NobelsRoutingModule,
 		SharedModule,
-		NobelsRoutingModule
+		TooltipModule
 	],
 	exports: [...pipes, ...components],
 	providers: [NobelsService]
