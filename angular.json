@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "search-nobel-laureates": {
+    "nobel-laureates": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "search-nobel-laureates:build"
+            "browserTarget": "nobel-laureates:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "search-nobel-laureates:build:production"
+              "browserTarget": "nobel-laureates:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "search-nobel-laureates:build"
+            "browserTarget": "nobel-laureates:build"
           }
         },
         "test": {
@@ -125,7 +125,7 @@
         }
       }
     },
-    "search-nobel-laureates-e2e": {
+    "nobel-laureates-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,11 +134,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "search-nobel-laureates:serve"
+            "devServerTarget": "nobel-laureates:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "search-nobel-laureates:serve:production"
+              "devServerTarget": "nobel-laureates:serve:production"
             }
           }
         },
@@ -154,5 +154,5 @@
       }
     }
   },
-  "defaultProject": "search-nobel-laureates"
+  "defaultProject": "nobel-laureates"
 }

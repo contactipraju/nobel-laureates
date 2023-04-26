@@ -20,9 +20,6 @@ Once successful, Github provides the URL of the preview build for the PR like: h
 Prod release: Merge the PR
 App will be deployed at: https://nobel-laureates-360.web.app and https://nobel-laureates-360.firebaseapp.com
 
-## Old github Deployment (using angular-cli-ghpages)
-https://contactipraju.github.io/search-nobel-laureates/
-
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
