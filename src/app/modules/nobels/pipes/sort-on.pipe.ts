@@ -27,7 +27,7 @@ export class SortOnPipe implements PipeTransform {
 
 			let getAgeInDays = function(person: Laureate) {
 				var _born = moment(person.born, 'YYYY-MM-DD');
-				var _year = moment(person['prizes'][0].year, 'YYYY');
+				var _year = moment(person['prizes']![0].year, 'YYYY');
 				return _year.diff(_born, 'days');
 			}
 

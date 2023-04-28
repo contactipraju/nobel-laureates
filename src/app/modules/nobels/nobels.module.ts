@@ -23,6 +23,7 @@ import { NobelsComponent }       from './components/nobels/nobels.component';
 import { LaureateCardComponent } from './components/laureate-card/laureate-card.component';
 import { NobelPrizeComponent }   from './components/nobel-prize/nobel-prize.component';
 import { NobelFilterComponent }  from './components/nobel-filter/nobel-filter.component';
+import { QuoteCardComponent }    from './components/quote-card/quote-card.component';
 
 const pipes = [
 	AreaPipe,
@@ -36,7 +37,8 @@ const components = [
 	NobelsComponent,
 	LaureateCardComponent,
 	NobelPrizeComponent,
-	NobelFilterComponent
+	NobelFilterComponent,
+	QuoteCardComponent
 ];
 
 @NgModule({
