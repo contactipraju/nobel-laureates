@@ -1,0 +1,32 @@
+.quote-card {
+	margin-top: 50px;
+
+	.quote-heading {
+		color: #3fb498;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.quote-image {
+		width: 100%;
+		border-radius: 4px;
+	}
+
+	.quote-text {
+		padding: 2px;
+		font-style: italic;
+	}
+
+	.person-details {
+		color: grey;
+		width: 100%;
+		text-align: right;
+
+		.person-name {
+
+		}
+		.award {
+			font-size: smaller;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<div class="quote-card">
+	<div class="quote-heading">Nobel Laureate of the day</div>
+
+	<img class="quote-image" alt="{{person.firstname}}" title="{{person.firstname}}" [src]="[imageURL]">
+
+	<div class="quote-text">
+		<div>"{{quote}}"</div>
+	</div>
+
+	<div class="person-details">
+		<div class="person-name">..{{person.firstname}} {{person.surname}}</div>
+		<div class="award" *ngFor="let prize of person.prizes">Nobel Prize in {{prize.category}} {{prize.year}}</div>
+	</div>
+</div>
